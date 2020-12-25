@@ -22,7 +22,6 @@ function Index({ queryForSearch }) {
                 }
             })
             .then(data => {
-                console.log(data)
                 setListOfFlights(data)
                 setIsLoading(false)
             })
@@ -34,8 +33,10 @@ function Index({ queryForSearch }) {
     }
 
     useEffect(() => {
-        getDataFromApi();
-        console.log(queryForSearch)
+        if (queryForSearch.DepartureAirportCode) {
+            getDataFromApi();
+            console.log(queryForSearch)
+        }
     }, [queryForSearch])
 
     return (
@@ -56,7 +57,7 @@ function Index({ queryForSearch }) {
 
                         <tbody>
                             {ListOfFlights.map((flight, index) => (
-                                index < 10 && (
+                                (index > 0 && index < 10) && (
                                     <tr className="ListOfFlight__flight" key={index}>
                                         <td>{pad(index + 1)}</td>
                                         <td>
