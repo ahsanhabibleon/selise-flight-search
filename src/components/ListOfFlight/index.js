@@ -48,10 +48,10 @@ function Index({ queryForSearch }) {
                             <tr>
                                 <td>Serial No.</td>
                                 <th>Airline</th>
-                                <th>Duration (Inbound)</th>
-                                <th>Duration (Outbound)</th>
+                                <th>Duration (Inbound) in minutes</th>
+                                <th>Duration (Outbound)  in minutes</th>
                                 <th>No. of Stops</th>
-                                <th>Cost</th>
+                                <th>Cost in USD</th>
                             </tr>
                         </thead>
 
