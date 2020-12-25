@@ -8,7 +8,7 @@ function Index({ queryForSearch }) {
     const [ListOfFlights, setListOfFlights] = useState([])
 
     const getDataFromApi = async () => {
-        const _url = "http://nmflightapi.azurewebsites.net/api/flight"
+        const _url = "https://nmflightapi.azurewebsites.net/api/flight"
         setIsLoading(true)
         await fetch(_url)
             .then(response => {
