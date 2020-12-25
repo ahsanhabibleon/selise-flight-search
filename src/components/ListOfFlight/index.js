@@ -40,7 +40,7 @@ function Index({ queryForSearch }) {
     }, [queryForSearch])
 
     return (
-        <div className="ListOfFlight">
+        <div className="ListOfFlight" data-test="ListOfFlight">
             <Container>
                 <div className="ListOfFlight__wrapper">
                     <table>
@@ -58,7 +58,7 @@ function Index({ queryForSearch }) {
                         <tbody>
                             {ListOfFlights.map((flight, index) => (
                                 (index > 0 && index < 10) && (
-                                    <tr className="ListOfFlight__flight" key={index}>
+                                    <tr className="ListOfFlight__flight" key={index} data-test="ListOfFlight__flight">
                                         <td>{pad(index + 1)}</td>
                                         <td>
                                             <div className="airplaneName">
